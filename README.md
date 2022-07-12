@@ -223,6 +223,9 @@ Once ORB-SLAM2 has loaded the vocabulary, press space in the rosbag tab. Enjoy!.
 For an RGB-D input from topics `/camera/rgb/image_raw` and `/camera/depth_registered/image_raw`, run node ORB_SLAM2/RGBD. You will need to provide the vocabulary file and a settings file. See the RGB-D example above.
 
   ```
+  roslaunch realsense2_camera rs_rgbd.launch
+  ```
+  ```
   rosrun ORB_SLAM2 RGBD Vocabulary/ORBvoc.txt Examples/ROS/ORB_SLAM2/D435i.yaml
   ```
   
