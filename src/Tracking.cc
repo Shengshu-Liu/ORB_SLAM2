@@ -757,6 +757,7 @@ void Tracking::CheckReplacedInLastFrame()
 bool Tracking::TrackReferenceKeyFrame()
 {
     // Compute Bag of Words vector
+    cout << "TrackReferenceKeyFrame" << endl;
     mCurrentFrame.ComputeBoW();
 
     // We perform first an ORB matching with the reference keyframe
@@ -866,6 +867,7 @@ void Tracking::UpdateLastFrame()
 
 bool Tracking::TrackWithMotionModel()
 {
+    cout << "TrackWithMotionModel" << endl;
     ORBmatcher matcher(0.9,true);
 
     // Update last frame pose according to its reference keyframe
@@ -916,7 +918,7 @@ bool Tracking::TrackWithMotionModel()
             else if(mCurrentFrame.mvpMapPoints[i]->Observations()>0)
                 nmatchesMap++;
         }
-    }    
+    }
 
     if(mbOnlyTracking)
     {
